@@ -6,6 +6,14 @@
 //  Copyright © 2018 Zaur Giyasov. All rights reserved.
 //
 
+/**
+ image names:
+ blankHiRes
+ blankRounded
+ stanford
+ stanfordTree
+ */
+
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -31,64 +39,21 @@
     self.flipCount = _flipCount + 1;
 }
 
-- (IBAction)Card1:(UIButton *)sender {
-    //[self touchCard:sender :@"A☭"];
+
+- (IBAction)Card:(UIButton *)sender {
+//    [self touchCard:sender :@"A♣️"];
     if (![sender.currentTitle length]) {
-        [sender setBackgroundImage: [UIImage imageNamed: @"сardfont"] forState: UIControlStateNormal];
-        [sender setTitle: @"A☭" forState: UIControlStateNormal];
+        [sender setBackgroundImage: [UIImage imageNamed: @"blankRounded"] forState: UIControlStateNormal];
+        [sender setTitle: @"A♣️" forState: UIControlStateNormal];
     } else {
-        [sender setBackgroundImage: [UIImage imageNamed: @"cardback"] forState: UIControlStateNormal];
+        [sender setBackgroundImage: [UIImage imageNamed: @"stanfordTree"] forState: UIControlStateNormal];
         [sender setTitle: @"" forState: UIControlStateNormal];
     }
     [self countPlus];
 }
 
-- (IBAction)Card2:(UIButton *)sender {
-//    [self touchCard:sender :@"A⚒︎"];
-    if (![sender.currentTitle length]) {
-        [sender setBackgroundImage: [UIImage imageNamed: @"сardfont"] forState: UIControlStateNormal];
-        [sender setTitle: @"A⚒︎" forState: UIControlStateNormal];
-    } else {
-        [sender setBackgroundImage: [UIImage imageNamed: @"cardback"] forState: UIControlStateNormal];
-        [sender setTitle: @"" forState: UIControlStateNormal];
-    }
-    [self countPlus];
-}
 
-- (IBAction)Card3:(UIButton *)sender {
-//    [self touchCard:sender :@"A☘︎"];
-    if (![sender.currentTitle length]) {
-        [sender setBackgroundImage: [UIImage imageNamed: @"сardfont"] forState: UIControlStateNormal];
-        [sender setTitle: @"A☘︎" forState: UIControlStateNormal];
-    } else {
-        [sender setBackgroundImage: [UIImage imageNamed: @"cardback"] forState: UIControlStateNormal];
-        [sender setTitle: @"" forState: UIControlStateNormal];
-    }
-    [self countPlus];
-}
 
-- (IBAction)Card4:(UIButton *)sender {
-//    [self touchCard:sender :@"A☸︎"];
-    if (![sender.currentTitle length]) {
-        [sender setBackgroundImage: [UIImage imageNamed: @"сardfont"] forState: UIControlStateNormal];
-        [sender setTitle: @"A☸︎" forState: UIControlStateNormal];
-    } else {
-        [sender setBackgroundImage: [UIImage imageNamed: @"cardback"] forState: UIControlStateNormal];
-        [sender setTitle: @"" forState: UIControlStateNormal];
-    }
-    [self countPlus];
-}
-
-//-(void)touchCard: (UIButton *) touchButton: (NSString *) title {
-//    if ([touchButton.currentTitle length]) {
-//        [touchButton setBackgroundImage: [UIImage imageNamed: @"cardback"] forState: UIControlStateNormal];
-//        [touchButton setTitle: title forState: UIControlStateNormal];
-//    } else {
-//        [touchButton setBackgroundImage: [UIImage imageNamed: @"cardback"] forState: UIControlStateNormal];
-//        [touchButton setTitle: @"" forState: UIControlStateNormal];
-//    }
-//    [self countPlus];
-//}
 
 
 @end
